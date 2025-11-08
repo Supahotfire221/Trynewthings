@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: faceswap-ai-simple
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r simple_requirements.txt"
+    startCommand: "python simple_app.py"
+    healthCheckPath: /
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PORT
+        value: 10000
