@@ -1,0 +1,24 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "cd backend && python run.py"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+
+[[services]]
+name = "faceswap-app"
+
+[services.variables]
+NODE_ENV = "production"
+FLASK_ENV = "production"
+PYTHONUNBUFFERED = "1"
+
+[[services.ports]]
+port = 5000
+
+[deploy]
+healthcheckPath = "/api/health"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
