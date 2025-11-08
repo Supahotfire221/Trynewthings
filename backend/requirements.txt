@@ -3,7 +3,7 @@ Flask-CORS==4.0.0
 Flask-SocketIO==5.3.6
 SQLAlchemy==2.0.21
 Flask-SQLAlchemy==3.0.5
-Psycopg2-binary==2.9.7
+psycopg2-binary==2.9.7
 python-socketio==5.8.0
 insightface==0.7.3
 opencv-python==4.8.1.78
