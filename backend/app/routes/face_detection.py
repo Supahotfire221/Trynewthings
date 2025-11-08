@@ -2,6 +2,7 @@
 Face detection API endpoint.
 """
 import cv2
+import numpy as np
 from flask import Blueprint, request, jsonify
 from app.models import db, File
 from app.ai.insightface_handler import face_detector
