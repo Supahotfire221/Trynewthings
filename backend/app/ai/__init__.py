@@ -1,0 +1,3 @@
+"""
+AI handlers package initialization.
+"""
